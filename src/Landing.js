@@ -1,9 +1,33 @@
 $(function() {
+
+  var pageRs = [
+    {
+      pageName: 'Temp',
+      imgSrc: 'loginpage/cubet_login1.jpg'
+    },
+    {
+      pageName: 'Temp',
+      imgSrc: 'loginpage/cubet_login2.jpg'
+    },
+    {
+      pageName: 'Temp',
+      imgSrc: 'loginpage/cubet_login3.jpg'
+    },
+    {
+      pageName: 'Temp',
+      imgSrc: 'loginpage/cubet_login4.jpg'
+    },
+    {
+      pageName: 'Temp',
+      imgSrc: 'loginpage/cubet_login5.jpg'
+    },
+  ];
   React.render(
-    <LoginHeader />,
-    document.getElementById("login-header")
+    <Landing pageResource={pageRs} />,
+    document.getElementById("container")
   );
-  Page.init();
+
+  // Page.init();
 
   $('#referer_url').val(window.localStorage.getItem('cubetSharepinId'));
   window.localStorage.removeItem('cubetSharepinId');
@@ -61,3 +85,20 @@ $(window).scroll(function() {
     }
   }
 });
+
+var Landing = React.createClass({
+  componentDidMount: function() {
+    // var oPage = Page();
+    // oPage.init();
+  },
+  render: function() {
+    return (
+      <div id="log_in_container" className="log_in_container">
+        <div className="error_message"  ></div>
+        <LoginHeader />
+        <PageFliper pages={this.props.pageResource} />
+        <LoginFooter />
+      </div>
+    );
+  }
+})

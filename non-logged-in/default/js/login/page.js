@@ -1,4 +1,4 @@
-var Page = (function() {
+var Page = function() {
 
 	var $container = $( '#log_in_container' ),
 		$bookBlock = $( '#bb-bookblock' ),
@@ -176,4 +176,4 @@ var Page = (function() {
 
 	return { init : init };
 
-})();
+}

@@ -20,7 +20,8 @@ var PageFliper = React.createClass({displayName: "PageFliper",
                     React.createElement("span", {id: "bb-nav-prev"}, "←"), 
                     React.createElement("span", {id: "bb-nav-next"}, "→")
                 )
-            )   
+            )
+             
         );
     }
 });

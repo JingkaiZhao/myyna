@@ -1,8 +1,8 @@
 var PageFliper = React.createClass({displayName: "PageFliper",
     componentDidMount: function() {
         //
-        var oPage = Page();
-        oPage.init();
+        // var oPage = Page();
+        // oPage.init();
     },
     render: function() {
         var pagesArr = [];
@@ -20,7 +20,8 @@ var PageFliper = React.createClass({displayName: "PageFliper",
                     React.createElement("span", {id: "bb-nav-prev"}, "←"), 
                     React.createElement("span", {id: "bb-nav-next"}, "→")
                 )
-            )   
+            )
+             
         );
     }
 });

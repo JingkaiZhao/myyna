@@ -1,6 +1,14 @@
 $(function() {
+  React.render(
+    React.createElement(LoginHeader, null),
+    document.getElementById("log_in_container")
+  );
+  React.render(
+    React.createElement(PageFliper, {pages: pagesArr}),
+    document.getElementById("log_in_container")
+  );        
 
-  var pageRs = [
+  var pagesArr = [
     {
       pageName: 'Temp',
       imgSrc: 'loginpage/cubet_login1.jpg'
@@ -23,8 +31,7 @@ $(function() {
     },
   ];
   React.render(
-    React.createElement(Landing, {pageResource: pageRs}),
-    document.getElementById("container")
+      document.getElementById("page-wrapper")
   );
 
   // Page.init();
@@ -85,20 +92,3 @@ $(window).scroll(function() {
     }
   }
 });
-
-var Landing = React.createClass({displayName: "Landing",
-  componentDidMount: function() {
-    // var oPage = Page();
-    // oPage.init();
-  },
-  render: function() {
-    return (
-      React.createElement("div", {id: "log_in_container", className: "log_in_container"}, 
-        React.createElement("div", {className: "error_message"}), 
-        React.createElement(LoginHeader, null), 
-        React.createElement(PageFliper, {pages: this.props.pageResource}), 
-        React.createElement(LoginFooter, null)
-      )
-    );
-  }
-})

@@ -1,6 +1,10 @@
 $(function() {
+  React.render(
+    React.createElement(LoginHeader, null),
+    document.getElementById("login-header")
+  );
 
-  var pageRs = [
+  var pagesArr = [
     {
       pageName: 'Temp',
       imgSrc: 'loginpage/cubet_login1.jpg'
@@ -21,14 +25,11 @@ $(function() {
       pageName: 'Temp',
       imgSrc: 'loginpage/cubet_login5.jpg'
     },
-  ];
+  ]
   React.render(
-    React.createElement(Landing, {pageResource: pageRs}),
-    document.getElementById("container")
+      React.createElement(PageFliper, {pages: pagesArr, initObj: Page}),
+      document.getElementById("page-wrapper")
   );
-
-  // Page.init();
-
   $('#referer_url').val(window.localStorage.getItem('cubetSharepinId'));
   window.localStorage.removeItem('cubetSharepinId');
 
@@ -85,20 +86,3 @@ $(window).scroll(function() {
     }
   }
 });
-
-var Landing = React.createClass({displayName: "Landing",
-  componentDidMount: function() {
-    // var oPage = Page();
-    // oPage.init();
-  },
-  render: function() {
-    return (
-      React.createElement("div", {id: "log_in_container", className: "log_in_container"}, 
-        React.createElement("div", {className: "error_message"}), 
-        React.createElement(LoginHeader, null), 
-        React.createElement(PageFliper, {pages: this.props.pageResource}), 
-        React.createElement(LoginFooter, null)
-      )
-    );
-  }
-})

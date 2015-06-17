@@ -88,8 +88,6 @@ $(window).scroll(function() {
 
 var Landing = React.createClass({displayName: "Landing",
   componentDidMount: function() {
-    // var oPage = Page();
-    // oPage.init();
   },
   render: function() {
     return (

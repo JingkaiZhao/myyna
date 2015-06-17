@@ -1,6 +1,6 @@
 var PageFliper = React.createClass({displayName: "PageFliper",
     componentDidMount: function() {
-        //
+        //this.props.initObj.init();
         var oPage = Page();
         oPage.init();
     },
@@ -12,15 +12,9 @@ var PageFliper = React.createClass({displayName: "PageFliper",
             pagesArr.push(el);
         });
         return (
-            React.createElement("div", {className: "bb-custom-wrapper"}, 
-                React.createElement("div", {id: "bb-bookblock", className: "bb-bookblock"}, 
-                    pagesArr
-                ), 
-                React.createElement("nav", null, 
-                    React.createElement("span", {id: "bb-nav-prev"}, "←"), 
-                    React.createElement("span", {id: "bb-nav-next"}, "→")
-                )
-            )   
+            React.createElement("div", {id: "bb-bookblock", className: "bb-bookblock"}, 
+                pagesArr
+            ) 
         );
     }
 });
