@@ -1,0 +1,2 @@
+# ignore all compile temp files
+components/.module-cache/

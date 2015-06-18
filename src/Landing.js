@@ -23,8 +23,12 @@ $(function() {
     },
   ];
   React.render(
-    <Landing pageResource={pageRs} />,
-    document.getElementById("container")
+    <div className="component-container">
+      <Landing pageResource={pageRs} />
+      <SignupModal />
+      <FindPwdModal />
+    </div>,
+    document.getElementById("body-container")
   );
 
   // Page.init();
@@ -88,13 +92,13 @@ $(window).scroll(function() {
 
 var Landing = React.createClass({
   componentDidMount: function() {
-    // var oPage = Page();
-    // oPage.init();
+    var oPage = Page();
+    oPage.init();
   },
   render: function() {
     return (
       <div id="log_in_container" className="log_in_container">
-        <div className="error_message"  ></div>
+        <div className="error_message"></div>
         <LoginHeader />
         <PageFliper pages={this.props.pageResource} />
         <LoginFooter />

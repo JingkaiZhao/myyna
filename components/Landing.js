@@ -23,8 +23,12 @@ $(function() {
     },
   ];
   React.render(
-    React.createElement(Landing, {pageResource: pageRs}),
-    document.getElementById("container")
+    React.createElement("div", {className: "component-container"}, 
+      React.createElement(Landing, {pageResource: pageRs}), 
+      React.createElement(SignupModal, null), 
+      React.createElement(FindPwdModal, null)
+    ),
+    document.getElementById("body-container")
   );
 
   // Page.init();
@@ -88,8 +92,8 @@ $(window).scroll(function() {
 
 var Landing = React.createClass({displayName: "Landing",
   componentDidMount: function() {
-    // var oPage = Page();
-    // oPage.init();
+    var oPage = Page();
+    oPage.init();
   },
   render: function() {
     return (

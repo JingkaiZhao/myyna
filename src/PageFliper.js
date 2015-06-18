@@ -1,8 +1,8 @@
 var PageFliper = React.createClass({
     componentDidMount: function() {
         //
-        var oPage = Page();
-        oPage.init();
+        // var oPage = Page();
+        // oPage.init();
     },
     render: function() {
         var pagesArr = [];
