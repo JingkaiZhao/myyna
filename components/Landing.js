@@ -1,30 +1,30 @@
 $(function() {
 
-  var pageRs = [
+  var mockPageData = [
     {
       pageName: 'Temp',
-      imgSrc: 'loginpage/cubet_login1.jpg'
+      imgSrc: '../loginpage/cubet_login1.jpg'
     },
     {
       pageName: 'Temp',
-      imgSrc: 'loginpage/cubet_login2.jpg'
+      imgSrc: '../loginpage/cubet_login2.jpg'
     },
     {
       pageName: 'Temp',
-      imgSrc: 'loginpage/cubet_login3.jpg'
+      imgSrc: '../loginpage/cubet_login3.jpg'
     },
     {
       pageName: 'Temp',
-      imgSrc: 'loginpage/cubet_login4.jpg'
+      imgSrc: '../loginpage/cubet_login4.jpg'
     },
     {
       pageName: 'Temp',
-      imgSrc: 'loginpage/cubet_login5.jpg'
+      imgSrc: '../loginpage/cubet_login5.jpg'
     },
   ];
   React.render(
     React.createElement("div", {className: "component-container"}, 
-      React.createElement(Landing, {pageResource: pageRs}), 
+      React.createElement(Landing, {pageResource: mockPageData}), 
       React.createElement(SignupModal, null), 
       React.createElement(FindPwdModal, null)
     ),

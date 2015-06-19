@@ -9,7 +9,7 @@ var SinglePage = React.createClass({displayName: "SinglePage",
                         React.createElement("div", {className: "row image ipad"}, 
                             React.createElement("div", {className: "col-sm-3 col-xs-offset-1"}, 
                                 React.createElement("div", {className: "pin1"}, 
-                                    React.createElement("img", {src: "default/images/login/pin_1.png"})
+                                    React.createElement("img", {src: "../default/images/login/pin_1.png"})
                             )
                             ), 
                             React.createElement("div", {className: "col-sm-4 image1_quote"}, 
@@ -17,7 +17,7 @@ var SinglePage = React.createClass({displayName: "SinglePage",
                             ), 
                             React.createElement("div", {className: "col-sm-3 col-xs-offset-1"}, 
                                 React.createElement("div", {className: "pin2"}, 
-                                    React.createElement("img", {src: "default/images/login/pin_2.png"})
+                                    React.createElement("img", {src: "../default/images/login/pin_2.png"})
                                 )
                             )
                         )

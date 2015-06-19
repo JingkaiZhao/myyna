@@ -9,7 +9,7 @@ var SinglePage = React.createClass({
                         <div className="row image ipad">
                             <div className="col-sm-3 col-xs-offset-1">
                                 <div className="pin1">
-                                    <img src="default/images/login/pin_1.png" />
+                                    <img src="../default/images/login/pin_1.png" />
                             </div>
                             </div>
                             <div className="col-sm-4 image1_quote">
@@ -17,7 +17,7 @@ var SinglePage = React.createClass({
                             </div>
                             <div className="col-sm-3 col-xs-offset-1">
                                 <div className="pin2">
-                                    <img src="default/images/login/pin_2.png" />
+                                    <img src="../default/images/login/pin_2.png" />
                                 </div>
                             </div>
                         </div>
