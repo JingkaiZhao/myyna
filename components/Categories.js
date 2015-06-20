@@ -12,17 +12,21 @@ var mockCategory = {
         name: 'Board 106'
     }
 };
+var mockMenuItem = {
+    name: "Category-",
+    url: "temp"
+};
+var mockCategories = [];
+var mockMenuItems = [];
+for (var i = 0; i < 15; ++i) {
+    mockCategories.push(mockCategory);
+    mockMenuItem.name = "Category-" + i;
+    mockMenuItems.push(mockMenuItem);
+}
 React.render(
     React.createElement("div", {className: "component-container"}, 
-        React.createElement(GlobalHeader, null), 
-        React.createElement("div", {id: "container", className: "cont-fixed"}, 
-            React.createElement(CategoryPin, {pinData: mockCategory}), 
-            React.createElement("div", {id: "loadmoreajaxloader", style: {'display':'none'}}, 
-                React.createElement("center", null, 
-                    React.createElement("img", {src: "../default/images/loader.jpeg"})
-                )
-            )
-        )
+        React.createElement(GlobalHeader, {menuItems: mockMenuItems}), 
+        React.createElement(CategoriesCollection, {categoriesData: mockCategories})
     ),
     document.getElementById("categories-container")
 );

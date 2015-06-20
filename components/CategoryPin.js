@@ -1,5 +1,5 @@
 /**
- * <CategoryPin pinData={} />
+ * <CategoryPin pinData={} key=""/>
  * @pinData {
  *      carouselImgSrc,
  *      carouselNavUrl,
@@ -13,7 +13,7 @@ var CategoryPin = React.createClass({displayName: "CategoryPin",
     render: function() {
         var data = this.props.pinData;
         return (
-            React.createElement("div", {className: "element clearfix"}, 
+            React.createElement("div", {className: "element clearfix", id: "category-" + this.props.key}, 
 
                 React.createElement("div", {id: "myCarousel2_557460a5fce885ab59fe0d7b", className: "carousel slide custom"}, 
 
@@ -43,10 +43,10 @@ var CategoryPin = React.createClass({displayName: "CategoryPin",
                         React.createElement("a", {href: ""}, data.createDate)
                     ), 
                     /* like button */
-                    React.createElement("a", {href: "javascript:void(0)", className: "glyphicon glyphicon-heart date ", style: {'pointer-events':'none'}, id: "like_557460a5fce885ab59fe0d7b", onclick: "pinlike('557460a5fce885ab59fe0d7b', this)"}), 
+                    React.createElement("a", {href: "javascript:void(0)", className: "glyphicon glyphicon-heart date ", style: {'pointerEvents':'none'}, id: "like_557460a5fce885ab59fe0d7b", onclick: "pinlike('557460a5fce885ab59fe0d7b', this)"}), 
                     /* like counts */
                     React.createElement("span", {className: "text"}, 
-                        React.createElement("a", {className: "pincount", id: "pincount_557460a5fce885ab59fe0d7b", style: {'pointer-events':'none'}, href: ""}, "4")
+                        React.createElement("a", {className: "pincount", id: "pincount_557460a5fce885ab59fe0d7b", style: {'pointerEvents':'none'}, href: ""}, "4")
                     ), 
 
                     React.createElement("a", {href: "http://www.jasminebee.org", target: "_blank"}, 
@@ -64,5 +64,3 @@ var CategoryPin = React.createClass({displayName: "CategoryPin",
         );
     }
 });
-
-

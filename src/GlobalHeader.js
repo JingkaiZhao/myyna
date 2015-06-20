@@ -1,3 +1,8 @@
+/**
+ * <GlobalHeader menuItems={} />
+ * @param  {String} ) {                   return (            <header className [description]
+ * @return {[type]}   [description]
+ */
 var GlobalHeader = React.createClass({
     render: function() {
         return (
@@ -5,6 +10,7 @@ var GlobalHeader = React.createClass({
                 <div className="row">
                     <div className="col-md-4 cubet_search_main">
                         <a href="javascript:;" className="menu_btn"></a>
+                        <HeaderMenu bodyContainer="menu-container" menuItems={this.props.menuItems} />
                     </div>
                     <div className="col-md-4 cubet_board">
                         <a href="" className="logo">

@@ -36,27 +36,12 @@
         <link rel="stylesheet" href="../default/css/profile_setting.css"/>
         <link rel="stylesheet" href="../default/css/add_pin.css"/>
         <link rel="stylesheet" href="../default/css/enhance.css"/>
-        <script type="text/javascript" src="../default/js/jquery-1.8.2.min.js" ></script>
-        <script type="text/javascript" src="../default/js/vendor/modernizr-2.6.2.min.js" ></script>
-        <script type="text/javascript" src="../default/js/bootstrap.min.js" ></script>
-        <script type="text/javascript" src="../default/js/jquery.flexslider.js" ></script>
-        <script type="text/javascript" src="../default/js/plugins.js" ></script>
-        <script type="text/javascript" src="../default/js/video.js" ></script>
-        <script type="text/javascript" src="../default/js/pincreation.js" ></script>
-        <script type="text/javascript" src="../default/js/mediaelement-and-player.min.js" ></script>
-        <script type="text/javascript" src="../build/react.js"></script>
-
-        <!--        <link rel="chrome-webstore-item"
-            href="https://chrome.google.com/webstore/detail/iocdfiikhpcdejdpbkpnfnchjdmcianf"/>
-        -->
         <link rel="stylesheet" href="../default/css/loader.css" />
         <link rel="stylesheet" href="../default/css/fontello.css" />
-        <script type="text/javascript" src="../default/js/jquery.masonry.min.js"></script>
-        <script src="../default/js/jquery.nicescroll.min.js"></script>
-        <script src="../default/js/jquery-validation.js"></script>
-
+        <script type="text/javascript" src="../default/js/jquery-1.8.2.min.js" ></script>
+        <script type="text/javascript" src="../build/react.js"></script>
+        <script type="text/javascript" src="../default/js/video.js" ></script>
         <script>videojs.options.flash.swf = "../default/js/video-js.swf"</script>
-        <script type="text/javascript" src="../default/js/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
   <!--[if lt IE 7]>
@@ -71,83 +56,9 @@
   <div class="body-container" id="categories-container">
   </div>
 
-  <div id="menu">
-
-    <a href="javascript:;" class="close"></a>
-    <ul>
-      <li class="active">
-        <a href="">Home</a>
-      </li>
-    </ul>
-    <ul class="nav_scoll">
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0adf.html">Category-2</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae0.html">Category-10</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae1.html">Category-4</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae2.html">Category-12</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae3.html">Category-0</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae4.html">Category-8</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae5.html">Category-6</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae6.html">Category-7</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae7.html">Category-3</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae8.html">Category-1</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0ae9.html">Category-9</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0aea.html">Category-5</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0aeb.html">Category-11</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0aec.html">Category-14</a>
-      </li>
-
-      <li>
-        <a href="../category/55746064fce885ab59fe0aed.html">Category-13</a>
-      </li>
-
-      <li></li>
-    </ul>
+  <div id="menu-container">
   </div>
 
-  
-
-  <!-- end id container -->
   <div class="h_c" style="display:none"></div>
   <form method="get" class="searchform">
   <input type="hidden" name="endlimit" id="endlimit" value="20"/>
@@ -177,9 +88,21 @@
   <div class="loader">
   <img src="../default/images/ajax-loader.gif"/>
   </div>
+  <script type="text/javascript" src="../default/js/vendor/modernizr-2.6.2.min.js" ></script>
+  <script type="text/javascript" src="../default/js/bootstrap.min.js" ></script>
+  <script type="text/javascript" src="../default/js/jquery.flexslider.js" ></script>
+  <!--script type="text/javascript" src="../default/js/plugins.js" ></script -->
+  <script type="text/javascript" src="../default/js/pincreation.js" ></script>
+  <script type="text/javascript" src="../default/js/mediaelement-and-player.min.js" ></script>
+  <script src="../default/js/jquery.nicescroll.min.js"></script>
+  <script src="../default/js/jquery-validation.js"></script>
+  <script type="text/javascript" src="../default/js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="../default/js/jquery.masonry.min.js"></script>
+  <script type="text/javascript" src="../components/HeaderMenu.js"></script>
   <script type="text/javascript" src="../components/GlobalHeader.js"></script>
   <script type="text/javascript" src="../components/PersonDetail.js"></script>
   <script type="text/javascript" src="../components/CategoryPin.js"></script>
+  <script type="text/javascript" src="../components/CategoriesCollection.js"></script>
   <script type="text/javascript" src="../components/Categories.js"></script>
   <script type="text/javascript" src="../default/js/socket_p1.js"></script>
   <script type="text/javascript" src="../socket.io/socket.io.js"></script>

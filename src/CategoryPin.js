@@ -1,5 +1,5 @@
 /**
- * <CategoryPin pinData={} />
+ * <CategoryPin pinData={} key=""/>
  * @pinData {
  *      carouselImgSrc,
  *      carouselNavUrl,
@@ -13,7 +13,7 @@ var CategoryPin = React.createClass({
     render: function() {
         var data = this.props.pinData;
         return (
-            <div className="element clearfix">
+            <div className="element clearfix" id={"category-" + this.props.key}>
 
                 <div id="myCarousel2_557460a5fce885ab59fe0d7b" className="carousel slide custom">
 
@@ -43,10 +43,10 @@ var CategoryPin = React.createClass({
                         <a href="">{data.createDate}</a>
                     </span>
                     {/* like button */}
-                    <a href="javascript:void(0)" className="glyphicon glyphicon-heart date " style={{'pointer-events':'none'}} id="like_557460a5fce885ab59fe0d7b" onclick="pinlike('557460a5fce885ab59fe0d7b', this)"></a>
+                    <a href="javascript:void(0)" className="glyphicon glyphicon-heart date " style={{'pointerEvents':'none'}} id="like_557460a5fce885ab59fe0d7b" onclick="pinlike('557460a5fce885ab59fe0d7b', this)"></a>
                     {/* like counts */}
                     <span className="text" >
-                        <a className="pincount" id="pincount_557460a5fce885ab59fe0d7b" style={{'pointer-events':'none'}} href="">4</a>
+                        <a className="pincount" id="pincount_557460a5fce885ab59fe0d7b" style={{'pointerEvents':'none'}} href="">4</a>
                     </span>
 
                     <a href="http://www.jasminebee.org" target="_blank">
@@ -64,5 +64,3 @@ var CategoryPin = React.createClass({
         );
     }
 });
-
-

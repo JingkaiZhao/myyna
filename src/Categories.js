@@ -12,17 +12,21 @@ var mockCategory = {
         name: 'Board 106'
     }
 };
+var mockMenuItem = {
+    name: "Category-",
+    url: "temp"
+};
+var mockCategories = [];
+var mockMenuItems = [];
+for (var i = 0; i < 15; ++i) {
+    mockCategories.push(mockCategory);
+    mockMenuItem.name = "Category-" + i;
+    mockMenuItems.push(mockMenuItem);
+}
 React.render(
     <div className="component-container">
-        <GlobalHeader />
-        <div id="container" className="cont-fixed" >
-            <CategoryPin pinData={mockCategory} />
-            <div id="loadmoreajaxloader" style={{'display':'none'}}>
-                <center>
-                    <img src="../default/images/loader.jpeg" />
-                </center>
-            </div>
-        </div>
+        <GlobalHeader menuItems={mockMenuItems} />
+        <CategoriesCollection categoriesData={mockCategories} />
     </div>,
     document.getElementById("categories-container")
 );
