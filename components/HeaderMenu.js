@@ -13,8 +13,8 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
             var el = React.createElement("li", {id: "item-" + index}, React.createElement("a", {href: item.url}, item.name));
             itemsArr.push(el);
         })
-        var menuBodyContainer = document.getElementById(this.props.bodyContainer);
-        if (menuBodyContainer) {
+        var menuContainer = document.getElementById(this.props.menuContainer);
+        if (menuContainer) {
             React.render(
                 React.createElement("div", {id: "menu"}, 
                     React.createElement("a", {href: "javascript:;", className: "close", onClick: this.handleCloseClick}), 
@@ -27,7 +27,7 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
                         itemsArr
                     )
                 ),
-                menuBodyContainer
+               menuContainer 
             );
         }
         this.ml, 
@@ -45,9 +45,9 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
         if (this.isMenuOpen == false)
         {
             if ($.browser.mozilla && (!this.ml || !this.mr)) {
-                if ($('#container').length > 0)
+                if ($('#' + this.props.bodyContainer).length > 0)
                 {
-                    this.mr = this.ml = $("#container").position().left;
+                    this.mr = this.ml = $("#" + this.props.bodyContainer).position().left;
                 }
                 if ($('.leftmenu_adjst').length > 0)
                 {
@@ -59,8 +59,8 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
                 }
 
             } else {
-                this.ml = $("#container").css('margin-left');
-                this.mr = $("#container").css('margin-right');
+                this.ml = $("#" + this.props.bodyContainer).css('margin-left');
+                this.mr = $("#" + this.props.bodyContainer).css('margin-right');
                 if ($('.leftmenu_adjst').length > 0)
                 {
                     this.mlb = $(".leftmenu_adjst").css('margin-left');
@@ -77,7 +77,7 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
             $("#menu").clearQueue().animate({
                 left: '0'
             })
-            $("#container").clearQueue().animate({
+            $("#" + this.props.bodyContainer).clearQueue().animate({
                 "margin-left": '290px',
                 "margin-right": '-290px'
             })
@@ -108,7 +108,7 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
             $("#menu").clearQueue().animate({
                 left: '-240px'
             })
-            $("#container").clearQueue().animate({
+            $("#" + this.props.bodyContainer).clearQueue().animate({
                 "margin-right": this.mr,
                 "margin-left": this.ml
             })
@@ -124,8 +124,9 @@ var HeaderMenu = React.createClass({displayName: "HeaderMenu",
 
             $(".close").fadeOut(200);
             $(".menu_btn").fadeIn(300);
+            var bdCtnr = this.props.bodyContainer;
             setTimeout(function() {
-                $("#container").css({"margin": "0 auto"});
+                $("#" + bdCtnr).css({"margin": "0 auto"});
                 $(".leftmenu_adjst").css({"margin": "0 1%"});
                 $("#pop_container").css({"margin": "0 1%"});
                 this.ml = this.mr = false;

@@ -13,7 +13,7 @@ var CategoriesCollection = React.createClass({
             catArr.push(el);
         });
         return (
-            <div id="container" className="cont-fixed" >
+            <div id="container" className="cont-fixed leftmenu_adjst" >
                 <div>
                     {catArr}
                 </div>

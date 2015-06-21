@@ -1,6 +1,6 @@
 /**
- * <GlobalHeader menuItems={} />
- * @param  {String} ) {                   return (            <header className [description]
+ * <GlobalHeader menuItems={} bodyContainer=""/>
+ * @param  {String} )                   
  * @return {[type]}   [description]
  */
 var GlobalHeader = React.createClass({displayName: "GlobalHeader",
@@ -10,7 +10,8 @@ var GlobalHeader = React.createClass({displayName: "GlobalHeader",
                 React.createElement("div", {className: "row"}, 
                     React.createElement("div", {className: "col-md-4 cubet_search_main"}, 
                         React.createElement("a", {href: "javascript:;", className: "menu_btn"}), 
-                        React.createElement(HeaderMenu, {bodyContainer: "menu-container", menuItems: this.props.menuItems})
+                        React.createElement(HeaderMenu, {menuContainer: this.props.menuContainer, 
+                            bodyContainer: this.props.bodyContainer, menuItems: this.props.menuItems})
                     ), 
                     React.createElement("div", {className: "col-md-4 cubet_board"}, 
                         React.createElement("a", {href: "", className: "logo"}, 

@@ -13,7 +13,7 @@ var CategoriesCollection = React.createClass({displayName: "CategoriesCollection
             catArr.push(el);
         });
         return (
-            React.createElement("div", {id: "container", className: "cont-fixed"}, 
+            React.createElement("div", {id: "container", className: "cont-fixed leftmenu_adjst"}, 
                 React.createElement("div", null, 
                     catArr
                 ), 

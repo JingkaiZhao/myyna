@@ -1,31 +1,6 @@
-var mockCategory = {
-    carouselImgSrc: '../images/small/pin-381.png',
-    carouselNavUrl: '../pin/557460a5fce885ab59fe0d7b.html',
-    pinDescription: 'pin description 381',
-    createDate: '1 week ago',
-    pinnedBy: {
-        avatar: '../user_images/thumb/blackbutterfly700.jpg',
-        name: 'antonio alonso'
-    },
-    pinnedOnto: {
-        avatar: '../boards/thumb/board-106.png',
-        name: 'Board 106'
-    }
-};
-var mockMenuItem = {
-    name: "Category-",
-    url: "temp"
-};
-var mockCategories = [];
-var mockMenuItems = [];
-for (var i = 0; i < 15; ++i) {
-    mockCategories.push(mockCategory);
-    mockMenuItem.name = "Category-" + i;
-    mockMenuItems.push(mockMenuItem);
-}
 React.render(
     <div className="component-container">
-        <GlobalHeader menuItems={mockMenuItems} />
+        <GlobalHeader menuContainer="menu-container" menuItems={mockMenuItems} bodyContainer="container" />
         <CategoriesCollection categoriesData={mockCategories} />
     </div>,
     document.getElementById("categories-container")

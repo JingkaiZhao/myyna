@@ -1,27 +1,5 @@
 $(function() {
-
-  var mockPageData = [
-    {
-      pageName: 'Temp',
-      imgSrc: '../loginpage/cubet_login1.jpg'
-    },
-    {
-      pageName: 'Temp',
-      imgSrc: '../loginpage/cubet_login2.jpg'
-    },
-    {
-      pageName: 'Temp',
-      imgSrc: '../loginpage/cubet_login3.jpg'
-    },
-    {
-      pageName: 'Temp',
-      imgSrc: '../loginpage/cubet_login4.jpg'
-    },
-    {
-      pageName: 'Temp',
-      imgSrc: '../loginpage/cubet_login5.jpg'
-    },
-  ];
+  
   React.render(
     <div className="component-container">
       <Landing pageResource={mockPageData} />
